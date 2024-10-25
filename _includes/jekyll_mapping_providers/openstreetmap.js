@@ -16,8 +16,8 @@ var jekyllMapping = (function () {
             while (locations.length > 0) {
                 s = locations.pop();
                 l = new OpenLayers.LonLat(s.longitude, s.latitude).transform( new OpenLayers.Projection("EPSG:4326"), new OpenLayers.Projection("EPSG:900913"));
-                m = new OpenLayers.Marker(l)
-                this.markers.addMarker(m)
+                m = new OpenLayers.Marker(l);
+                this.markers.addMarker(m);
                 bounds.extend(l);
                 jekyllMapListen(m, s);
             }
